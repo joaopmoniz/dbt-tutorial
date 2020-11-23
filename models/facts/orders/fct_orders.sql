@@ -15,7 +15,7 @@ order_payments as (
     group by 1
 ),
 
-final as (
+finals as (
 
     select
         orders.order_id,

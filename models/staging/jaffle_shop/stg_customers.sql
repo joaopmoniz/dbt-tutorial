@@ -5,7 +5,7 @@ with customers as (
         first_name,
         last_name
 
-    from raw.jaffle_shop.customers
+    from `kubeflow-jp.dbt_jp.jaffle_shop_customers`
 )
 
 select * from customers

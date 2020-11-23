@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from raw.jaffle_shop.orders
+    from `kubeflow-jp.dbt_jp.jaffle_shop_orders`
 )
 
 select * from orders

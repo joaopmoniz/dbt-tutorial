@@ -5,7 +5,7 @@ with customers as (
         first_name,
         last_name
 
-    from `kubeflow-jp.dbt_jp.jaffle_shop_customers`
+    from {{ source('dbt_jp', 'jaffle_shop_customers') }}
 )
 
 select * from customers

@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from `kubeflow-jp.dbt_jp.jaffle_shop_orders`
+    from {{ source('dbt_jp', 'jaffle_shop_orders') }}
 )
 
 select * from orders

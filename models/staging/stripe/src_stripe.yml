@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: dbt_jp
+    description: Project for jaffle shop database within dbt_jp schema
+    database: kubeflow-jp
+    tables:
+      - name: stripe_payments
+        description: Payments raw data.
+        columns:
+          - name: id
+            description: Primary key for payments
+            tests:
+              - unique
+              - not_null
+
+          - name: orderid
+            description: Orderid for each payment id

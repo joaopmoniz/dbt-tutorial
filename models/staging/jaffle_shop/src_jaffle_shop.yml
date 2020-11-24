@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: dbt_jp
+    description: Project for jaffle shop database within dbt_jp schema
+    database: kubeflow-jp
+    tables:
+      - name: jaffle_shop_customers
+        description: Customers raw data.
+        columns:
+          - name: id
+            description: Primary Key for customers table.
+            tests:
+              - unique
+              - not_null
+
+      - name: jaffle_shop_orders
+        description: Primary key for orders table.
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null

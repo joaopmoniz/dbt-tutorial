@@ -8,7 +8,7 @@ WITH payments as (
 		amount / 100 as amount,
 		created as created_date
 
-	from `kubeflow-jp.dbt_jp.stripe_payments`
+	from {{ source('dbt_jp', 'stripe_payments') }}
 )
 
 select * from payments
